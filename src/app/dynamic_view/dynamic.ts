@@ -10,11 +10,10 @@ import { timer } from 'rxjs';
 import { HelloComponent } from './hello.component';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'dynamic-app',
+  templateUrl: './dynamic.html',
 })
-export class AppComponent implements AfterViewInit {
+export class DynamicAppComponent implements AfterViewInit {
   name: string;
   constructor() {
     this.name = 'Angular';

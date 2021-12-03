@@ -22,11 +22,11 @@ export class TestcompComponent implements DoCheck, OnInit {
   constructor(private _changeRef: ChangeDetectorRef) {}
 
   ngOnInit() {
-    setInterval(() => {
+    /*setInterval(() => {
       this.obj.changer += 1;
       //this._changeRef.detectChanges();
       this._changeRef.markForCheck();
-    }, 1000);
+    }, 1000);*/
   }
 
   ngDoCheck() {
