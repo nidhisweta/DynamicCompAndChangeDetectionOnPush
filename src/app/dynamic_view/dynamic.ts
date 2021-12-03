@@ -34,8 +34,8 @@ export class DynamicAppComponent implements AfterViewInit {
     //this.vc.createEmbeddedView(this.content, {});
   }
   ngAfterViewInit() {
-    console.log(this.vc);
-    console.log(this.content);
+    //console.log(this.vc);
+    //console.log(this.content);
     //console.log(this.pRef.nativeElement.innerHTML);
     //this.vc.createEmbeddedView(this.content, {});
     this.pRef.nativeElement.innerHTML = 'DOM updated succesfully!!!';

@@ -30,7 +30,7 @@ export class Parent1Component implements DoCheck {
     //this.object1.changer=this.myvalue;
   }
   ngDoCheck() {
-    console.log('in parent' + this.object1.changer);
-    //this.object1.changer=this.object1.changer+1
+    console.log('in parent do check ' + this.object1.changer);
+    this.object1.changer = this.object1.changer + 1;
   }
 }

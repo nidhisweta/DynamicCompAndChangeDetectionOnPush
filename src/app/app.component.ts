@@ -16,17 +16,6 @@ import {
   <dynamic-app></dynamic-app> `,
 })
 export class AppComponent implements DoCheck {
-  name: string;
-  myvalue: number = 0;
-  public object1: any = {
-    changer: 1,
-  };
-  constructor() {
-    this.name = 'Angular';
-    //this.object1.changer=this.myvalue;
-  }
-  ngDoCheck() {
-    console.log('in App' + this.object1.changer);
-    //this.object1.changer=this.object1.changer+1
-  }
+  constructor() {}
+  ngDoCheck() {}
 }

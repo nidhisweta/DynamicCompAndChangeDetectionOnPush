@@ -20,7 +20,9 @@ export class TestcompComponent implements DoCheck, OnInit {
   private _oldValue: number = 1;
 
   constructor(private _changeRef: ChangeDetectorRef) {}
-
+  ngOnChanges() {
+    console.log('ngOnChange called ' + this.obj.changer);
+  }
   ngOnInit() {
     /*setInterval(() => {
       this.obj.changer += 1;
@@ -32,7 +34,7 @@ export class TestcompComponent implements DoCheck, OnInit {
   ngDoCheck() {
     if (this._oldValue !== this.obj.changer) {
       this._oldValue = this.obj.changer;
-      console.log('in child' + this._oldValue);
+      //console.log('in child' + this._oldValue);
       //disable this line to see the counter not moving
       //this._changeRef.detectChanges();
       this._changeRef.markForCheck();
