@@ -1,10 +1,30 @@
-import { Component, VERSION } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ChangeDetectionStrategy,
+  DoCheck,
+  OnInit,
+  Input,
+  OnChanges,
+} from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: 'app-root',
+  template: `
+  <app-parent1></app-parent1>  `,
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+export class AppComponent implements DoCheck {
+  name: string;
+  myvalue: number = 0;
+  public object1: any = {
+    changer: 1,
+  };
+  constructor() {
+    this.name = 'Angular';
+    //this.object1.changer=this.myvalue;
+  }
+  ngDoCheck() {
+    console.log('in App' + this.object1.changer);
+    //this.object1.changer=this.object1.changer+1
+  }
 }

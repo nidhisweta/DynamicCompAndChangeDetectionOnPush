@@ -1,0 +1,10 @@
+<hello [name]="name"></hello>
+<button (click)="create()">createview</button>
+<p #pRef>Start editing to see some magic happen :)</p>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div>dynamic div</div>
+</ng-template>
+<ng-container #vc>
+  <div>container</div>
+</ng-container>
